@@ -10,7 +10,7 @@ COPY . .
 
 RUN go build main.go
 
-FROM alpine
+FROM gcr.io/distroless/static-debian11
 
 COPY --from=builder /app /app
 
